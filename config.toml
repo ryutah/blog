@@ -1,8 +1,9 @@
-baseurl = "/"
+baseurl = "/blog/"
 languageCode = "jp"
 theme = "hello-friend"
 paginate = 5
 disqusShortname = "ryutah"
+publishDir = "docs"
 
 [params]
   # dir name of your blog content (default is `content/posts`).
@@ -46,7 +47,7 @@ disqusShortname = "ryutah"
 
     [languages.en.params.logo]
       logoText = "ryutah's blog"
-      logoHomeLink = "/"
+      logoHomeLink = "/blog/"
     # or
     #
     # path = "/img/your-example-logo.svg"
@@ -58,6 +59,6 @@ disqusShortname = "ryutah"
         name = "About"
         url = "/about"
       [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/ryutah"
