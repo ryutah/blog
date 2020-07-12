@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "engines": {
+    "node": "14.5.0",
+    "npm": "6.14.6"
+  },
+  "scripts": {
+    "deploy": "npx firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryutah/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryutah/blog/issues"
+  },
+  "homepage": "https://github.com/ryutah/blog#readme",
+  "devDependencies": {
+    "firebase-tools": "^8.5.0"
+  }
+}

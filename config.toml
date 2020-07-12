@@ -1,9 +1,8 @@
-baseurl = "/blog/"
+baseurl = "/"
 languageCode = "jp"
 theme = "hello-friend"
 paginate = 5
 disqusShortname = "ryutah"
-publishDir = "docs"
 
 [params]
   # dir name of your blog content (default is `content/posts`).
@@ -47,7 +46,7 @@ publishDir = "docs"
 
     [languages.en.params.logo]
       logoText = "ryutah's blog"
-      logoHomeLink = "/blog/"
+      logoHomeLink = "/"
     # or
     #
     # path = "/img/your-example-logo.svg"
