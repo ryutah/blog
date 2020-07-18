@@ -14,11 +14,11 @@ tasks:
       - ./script/new_post.sh
     silent: true
   serve:
-    descs: start local srever
+    desc: start local srever
     cmds:
       - docker run --rm -it -p 1313:1313 -v $(pwd):/src klakegg/hugo:0.74.2-ext-alpine serve -D
   deploy:
-    descs: start deploy
+    desc: start deploy
     deps:
       - build
     cmds:
