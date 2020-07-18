@@ -1,0 +1,45 @@
+name: Deploy Hugo to Firebase
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.74.2"
+      - name: build
+        run: hugo --minify
+      - name: upload public
+        uses: actions/upload-artifact@v1
+        with:
+          name: public
+          path: public
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: download public
+        uses: actions/download-artifact@master
+        with:
+          name: public
+          path: public
+      - name: deploy to firebase hosting
+        uses: w9jds/firebase-action@v1.5.0
+        with:
+          args: deploy --only hosting
+        env:
+          PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
