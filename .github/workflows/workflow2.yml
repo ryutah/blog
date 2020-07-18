@@ -1,0 +1,24 @@
+name: Workflow2
+on:
+  - push
+  # push:
+  #   branches:
+  #     - master
+
+jobs:
+  build:
+    name: Example2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Hello2
+        run: echo 'Hello World2'
+    # name: Build And Deploy
+    # runs-on: rk90/alpine-hugo-firebase@sha256:70f97deb3619b0cb0308058134f7e891db3f5ddd11802a22d87ae55c20bdff1b
+    # steps:
+    #   - uses: actions/checkout@v1
+    #     with:
+    #       submodules: true
+    #   - uses: ryank90/action-hugo-firebase-deploy@master
+    #     with:
+    #       firebase-token: ${{ secrets.firebase_token }}
+    #       alias: ${{ alias }} // Optional
