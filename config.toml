@@ -1,8 +1,9 @@
 baseurl = "/"
-languageCode = "jp"
+defaultContentLanguage = "ja"
+languageCode = "ja"
 theme = "hello-friend"
 paginate = 5
-disqusShortname = "ryutah"
+enableGitInfo = true
 
 [params]
   # dir name of your blog content (default is `content/posts`).
@@ -27,8 +28,8 @@ disqusShortname = "ryutah"
   # rssFullText = true
 
 [languages]
-  [languages.en]
-    title = "ryutah's blog"
+  [languages.ja]
+    title = "頑張らない開発"
     subtitle = ""
     keywords = ""
     copyright = ""
@@ -39,25 +40,26 @@ disqusShortname = "ryutah"
     newerPosts = "Newer posts"
     olderPosts = "Older posts"
     minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
+    dateFormatSingle = "2006-01-02 15:04"
+    dateFormatList = "2006-01-02 15:04"
+    lastModDisplay = "Modified:"
     # leave empty to disable, enter display text to enable
     # lastModDisplay = ""
 
-    [languages.en.params.logo]
-      logoText = "ryutah's blog"
+    [languages.ja.params.logo]
+      logoText = "頑張らない開発"
       logoHomeLink = "/"
     # or
     #
     # path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
+    [languages.ja.menu]
+      [[languages.ja.menu.main]]
         identifier = "about"
         name = "About"
         url = "/about"
-      [[languages.en.menu.main]]
+      [[languages.ja.menu.main]]
         identifier = "github"
         name = "GitHub"
         url = "https://github.com/ryutah"
