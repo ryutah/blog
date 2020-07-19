@@ -23,3 +23,7 @@ tasks:
       - build
     cmds:
       - npx firebase deploy
+  serve_gitpod:
+    desc: start local server on Gitpod
+    cmds:
+      - ./script/serve_on_gitpod.sh
