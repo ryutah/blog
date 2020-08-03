@@ -8,6 +8,9 @@ tags:
   - Hugo
   - Go
   - Google Cloud Platform
+  - Shell
+  - Bash
+  - 雑談
 draft: true
 ---
 
