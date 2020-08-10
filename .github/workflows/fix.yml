@@ -1,0 +1,13 @@
+name: Fix
+on: [pull_request]
+
+jobs:
+  editorconfig:
+    name: Fix with exitorconfig
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: fix with editorconfig
+        uses: zbeekman/EditorConfig-Action@master
+        env:
+          ALWAYS_LINT_ALL_FILES: false
